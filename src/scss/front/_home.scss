@@ -1,0 +1,296 @@
+// 橫幅區塊樣式
+.banner {
+  display: flex;
+  flex-direction: column;
+  
+  &-title {
+    @include section-text-style(120px, 900, 1.2);
+    margin: 20px 0;
+  }
+  
+  &-button {
+    align-self: flex-start;
+    padding: 20px 40px;
+    border: 1px solid $button-border-color;
+    border-radius: 16px;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  
+  &-decorate {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 100px;  
+    overflow: hidden;
+  }
+}
+
+// 服務區塊樣式
+.serve {
+  margin-top: 160px;
+  
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  
+  &-title {
+    @include section-text-style(48px, 900, 1.2);
+    width: 438px;
+    flex-shrink: 0;
+  }
+  
+  &-content {
+    @include section-text-style(32px, 900, 1.2);
+  }
+  
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    
+    &-item {
+      width: 32%;
+      padding: 85px 40px 80px 40px;
+      border: 1px solid $list-item-border-color;
+      border-radius: 16px;
+    }
+    
+    &-icon {
+      font-size: 80px;
+    }
+    
+    &-title {
+      @include section-text-style(32px, 900, 1.2);
+      margin: 20px 0;
+    }
+  }
+}
+
+// 夥伴區塊樣式 
+.partner {
+  margin-top: 160px;
+  
+  &-title {
+    @include section-text-style(32px, 900, 1.2);
+    margin-bottom: 80px;
+  }
+  
+  &-chunk {
+    position: relative;
+    
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      content: '';
+      width: 120px;
+      background: linear-gradient(to right, rgb(0, 0, 0, 1) 10%, rgb(0, 0, 0, 0.7) 70%, rgb(0, 0, 0, 0));
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      content: '';
+      width: 120px;
+      background: linear-gradient(to left, rgb(0, 0, 0, 1) 10%, rgb(0, 0, 0, 0.7) 70%, rgb(0, 0, 0, 0));
+    }
+  }
+  
+  &-logo {
+    display: flex;
+  }
+  
+  &-list {
+    margin-top: 160px;
+    
+    &-item {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      background: #ffffff14;
+      border-radius: 16px;
+    }
+    &-icon {
+      font-size: 14px;
+    }
+    
+    &-content {
+      flex-grow: 1;
+      margin: 20px 0 60px 0;
+    }
+    
+    &-user {
+      display: flex;
+      gap: 16px;
+    }
+    
+    &-name {
+      font-weight: 700;
+    }
+    
+    &-company {
+      font-size: 14px;
+    }
+  }
+}
+
+// 修改 swiper 樣式
+
+.swiper {
+  padding-bottom: 32px;
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #525252;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12PX;
+  background-color: #FFFFFF;
+}
+
+
+
+// 開始使用區塊
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 78px 0;
+  padding: 80px 0;
+
+  &-title {
+    @include section-text-style(48px, 900, 1.2);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 40px;
+    border: 1px solid $button-border-color;
+    border-radius: 16px;
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    span:first-of-type {
+      @include section-text-style(20px, 900, 1.2);
+    }
+  }
+}
+
+
+
+
+// 響應式平板樣式調整
+@media (max-width: 992px) {
+  // 平板服務
+  .serve {
+    &-list {
+      &-item {
+        padding: 45px 20px 40px 20px;
+      }
+    }
+  }
+
+  //平板夥伴
+  .partner {
+    &-list {
+      &-item {
+        padding: 20px;
+      }
+    }
+  }
+
+  
+}
+
+
+//  響應式手機版 767 以下樣式調整
+@media (max-width: 767px) {
+  
+  // 手機橫幅
+  .banner {
+    &-title {
+      margin: 40px 0;
+      font-size: 48px;
+    }
+
+    &-decorate {
+      align-self: center;
+    }
+  }
+
+  //手機服務
+  .serve {
+    margin-top: 120px;
+    &-header {
+      flex-direction: column;
+      margin-bottom: 48px;
+    }
+    
+    &-title {
+      width: auto;
+      margin-bottom: 24px;
+      font-size: 20px;
+    }
+
+    &-content {
+      font-size: 32px;
+    }
+
+    &-list {
+      flex-direction: column;
+      gap: 12px;
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+
+
+  // 手機夥伴
+  .partner {
+    margin-top: 120px;
+    &-logo {
+      overflow: hidden;
+
+      li {
+        flex-shrink: 0;
+        max-width: 160px;
+      }
+    }
+
+    &-list {
+      margin-top: 48px;
+    }
+  }
+
+  // 手機開始使用
+  .start {
+    &-title {
+      width: 224px;
+      font-size: 32px;
+    }
+  }
+}

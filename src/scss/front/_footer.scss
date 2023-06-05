@@ -1,0 +1,90 @@
+// 頁尾區塊
+.footer {
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &-title img {
+    width: 245px;
+  }
+
+  &-title {
+    order: 1;
+
+    img {
+      width: 245px;
+    }
+  }
+
+  &-list {
+    &-item {
+      margin-bottom: 8px;
+    }
+
+    &-link {
+      @include section-text-style(80px, 900, 1.2);
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    gap: 20px;
+    font-weight: 700;
+  }
+
+  &-station {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+  }
+
+  &-rolltop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    span:last-of-type {
+      font-size: 16px;
+    }
+  }
+
+}
+
+
+//  響應式手機版 575 以下樣式調整
+@media (max-width: 575px) {
+  .footer {
+      &-top {
+        flex-direction: column;
+        ;
+      }
+  
+      &-title {
+        order: 0;
+        margin-bottom: 40px;
+      }
+  
+      &-list {
+        &-link {
+          font-size: 48px;
+        }
+      }
+  
+      &-bottom {
+        flex-wrap: wrap;
+      }
+  
+      &-station {
+        width: 100%;
+        order: 1;
+      }
+    }
+}

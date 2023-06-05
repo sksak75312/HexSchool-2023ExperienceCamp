@@ -1,0 +1,86 @@
+@mixin section-text-style($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+.d-none {
+  display: none;
+}
+
+
+// 連結 hover 
+.link-hover:hover {
+  opacity: 0.8;
+}
+
+//開始使用的link-hover 
+.start-button-link-hover:hover {
+  background: $main-text-color;
+  color: $main-bg-color;
+}
+
+// 工具區塊 篩選、排序 active-style 
+.tools-button-active {
+  border-color: #000000 !important;
+}
+
+// 工具區塊 分頁 active 
+.tools-page-active {
+  background: #000000;
+  color: #ffffff;
+}
+
+// 提問區塊 active-style
+.pr-question-active {
+  border-color: #ffffff !important;
+}
+
+
+// 區塊水平置中
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+// decorate 動畫
+.decorate-Animation {
+  span {
+      position: relative;
+  
+      &:first-child {
+        top: 182px;
+        animation: decorateAnimation 3s .8s ease-in-out infinite;
+      }
+  
+      &:nth-child(2) {
+        top: 182px;
+        animation: decorateAnimation 3s .5s ease-in-out infinite;
+      }
+  
+      &:last-child {
+        top: 182px;
+        animation: decorateAnimation 3s .2s ease-in-out infinite;
+      }
+    }
+  
+    @keyframes decorateAnimation {
+      0% {
+        top: 182px;
+      }
+  
+      30% {
+        top: 0px;
+      }
+  
+      90% {
+        top: 0px;
+      }
+  
+      100% {
+        top: -182px;
+      }
+    }
+}
+

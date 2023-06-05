@@ -1,0 +1,25 @@
+{
+  "name": "2.-2023-experience-ai-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "server": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "jquery": "^3.7.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "sass-loader": "^13.3.1",
+    "swiper": "^9.3.2",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}

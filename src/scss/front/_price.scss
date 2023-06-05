@@ -1,0 +1,262 @@
+// 定價橫幅區塊
+.pr-banner {
+  padding-top: 40px;
+
+  &-title {
+    @include section-text-style(120px, 900, 1.2);
+  }
+
+  &-content {
+    @include section-text-style(48px, 900, 1.2);
+    max-width: 636px;
+    margin: 80px 0 238px auto;
+  }
+
+  &-decorate {
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+// 定價區塊
+.pr-price {
+  margin-top: 160px;
+
+  &-title {
+    @include section-text-style(32px, 900, 1.2);
+    margin-bottom: 80px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      height: 318px;
+      border: 1px solid $list-item-border-color;
+      border-radius: 16px;
+    }
+
+    &-top {
+      flex-grow: 1;
+      padding: 20px 32px;
+
+      h3 {
+        @include section-text-style(32px, 900, 1.2);
+      }
+
+      ul {
+        list-style: inside;
+        margin: 12px;
+      }
+    }
+    
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-top: 1px solid $list-item-border-color;
+
+      p {
+        @include section-text-style(20px, 900, 1.2);
+
+        span {
+          font-weight: 400;
+          color: #919191;
+        }
+      }
+
+
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      span:first-child {
+        font-weight: 700;
+      }
+
+      span:last-child {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+//規範區塊
+.pr-norm {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 160px;
+
+  &-title {
+    @include section-text-style(32px, 900, 1.2);
+    flex-shrink: 0;
+  }
+
+  &-list {
+    &-item {
+      padding: 40px 0;
+      border-bottom: 1px solid $list-item-border-color;
+
+      &:first-child {
+        padding: 0 0 40px 0;
+      }
+
+      h3{
+        @include section-text-style(48px, 900, 1.2);
+        margin-bottom: 24px;
+      }
+
+      p {
+        @include section-text-style(32px, 400, 1.2);
+      }
+    }
+  }
+}
+
+// 問題區塊
+.pr-question {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 160px 0;
+
+  &-title {
+    @include section-text-style(32px, 900, 1.2);
+    flex-shrink: 0;
+  }
+
+  &-list {
+    width: 856px;
+    
+    &-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 40px;
+      margin-bottom: 16px;
+      border: 1px solid $list-item-border-color;
+      border-radius: 16px;
+      cursor: pointer;
+
+      &:hover {
+        border-color: #ffffff;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        @include section-text-style(20px, 900, 1.2);
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// 767px 以下樣式調整
+@media (max-width: 767px) {
+  // 定價區塊
+  .pr-price {
+    &-list {
+      &-item {
+        width: 100%;
+      }
+
+      &-bottom {
+        padding: 20px;
+      }
+    }
+  }
+
+  // 規範區塊
+  .pr-norm {
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: 48px;
+    }
+  }
+
+  //問題區塊 
+  .pr-question {
+    flex-direction: column;
+    margin: 120px 0;
+
+    &-list {
+      width: auto;
+
+      &-item {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+
+// 575 以下樣式調整
+@media (max-width: 575px) {
+  // 橫幅區塊
+  .pr-banner {
+      &-title {
+        font-size: 48px;
+      }
+  
+      &-content {
+        font-size: 28px;
+        max-width: 257px;
+        margin: 64px 0 258px auto;
+      }
+    }
+
+  //定價區塊
+  .pr-price {
+    margin-top: 120px;
+    &-title {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    &-list {
+      &-item {
+        height: 240px;
+      }
+
+      &-top {
+        padding: 20px;
+      }
+    }
+  }
+
+  // 規範區塊
+  .pr-norm {
+    &-title {
+      font-size: 20px;
+    }
+
+    &-list {
+      &-item {
+        h3 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

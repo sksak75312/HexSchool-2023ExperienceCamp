@@ -1,0 +1,82 @@
+// 導覽列樣式設定
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ffff;
+
+  &-logo {
+    width: 245px;
+  }
+
+  &-menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  &-link {
+    font-weight: 700;
+  }
+
+  &-mobile {
+    display: none;
+  }
+
+  &-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: calc(100vh - 85px);
+    background: $main-bg-color;
+
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 0;
+      height: calc(100% - 132px);
+      border-top: 1px solid #ffff;
+      border-bottom: 1px solid #ffff;
+
+      a{
+        @include section-text-style(120px, 900, 1.2);
+      }
+    }
+  }
+}
+
+
+//  響應式手機版 767 以下樣式調整
+@media (max-width: 767px) {
+  // 手機導覽列
+  .header {
+    padding: 28px 0;
+
+    &-logo {
+      width: 147px;
+    }
+
+    &-menu {
+      display: none;
+    }
+    
+    
+    &-mobile {
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &-close {
+        display: none;
+      }
+    }
+  }
+}
