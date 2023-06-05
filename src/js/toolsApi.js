@@ -61,17 +61,17 @@ const dataHandler = () => {
 const pageHandler = () => {
   let html = '';
   for (let i = 0; i < pageData.total_pages; i++) {
-    html += `<li class="tools-pages-item"><button class="${
-     i + 1 === Number(page)  ? 'tools-page-active' : ''
-    }">${i + 1}</button></li>`;
+    html += `<li class="tools-pages-item"><a href="#tools" class="${
+      i + 1 === Number(page) ? 'tools-page-active' : ''
+    }">${i + 1}</a></li>`;
   }
 
   pageData.has_next ? html += `<li class="tools-pages-item" >
-            <button type="button">
+            <a href="#tools">
               <span class="material-icons">
                 keyboard_arrow_right
               </span>
-            </button>
+            </a>
           </li>`: '';
 
   $('.tools-pages').html(html);
