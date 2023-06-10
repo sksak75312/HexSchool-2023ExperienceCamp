@@ -291,6 +291,12 @@
         order: 2;
         margin-left: 55px;
       }
+
+      &-list {
+        &-item {
+          width: 48%;
+        }
+      }
     }
 }
 
@@ -324,12 +330,6 @@
   
         &-item {
           flex-shrink: 0;
-        }
-      }
-  
-      &-list {
-        &-item {
-          width: 48%;
         }
       }
     }

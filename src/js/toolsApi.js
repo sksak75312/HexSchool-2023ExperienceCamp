@@ -12,10 +12,9 @@ const getData = () => {
   axios
     .get(`https://2023-engineer-camp.zeabur.app/api/v1/works?sort=${sort}&type=${type}&search=${search}&page=${page}`)
     .then((res) => {
-      console.log(res);
       data = res.data.ai_works.data;
       pageData = res.data.ai_works.page;
-      console.log(pageData);
+      console.log(data)
       dataHandler();
       pageHandler();
     })
@@ -33,14 +32,14 @@ const dataHandler = () => {
   } else {
     data.forEach((item) => {
       html += `<li class="tools-list-item">
-              <div class="tools-list-img"><img src="${item.imageUrl}" alt=""></div>
+              <div class="tools-list-img"><img src="${item.imageUrl}" alt="${item.description}"></div>
               <div class="tools-list-body">
-                <h2>${item.title}</h2>
+                <h3>${item.title}</h3>
                 <p>${item.description}</p>
               </div>
               <div class="tools-list-footer">
                 <div class="tools-list-data">
-                  <h3 class="tools-list-ai">AI 模型</h3>
+                  <h4 class="tools-list-ai">AI 模型</h4>
                   <span>${item.model}</span>
                 </div>
                 <div class="tools-list-data">

@@ -38,13 +38,13 @@
   }
   
   &-title {
-    @include section-text-style(48px, 900, 1.2);
+    @include section-text-style(32px, 900, 1.2);
     width: 438px;
     flex-shrink: 0;
   }
   
   &-content {
-    @include section-text-style(32px, 900, 1.2);
+    @include section-text-style(48px, 900, 1.2);
   }
   
   &-list {
@@ -262,6 +262,7 @@
     &-list {
       flex-direction: column;
       gap: 12px;
+
       &-item {
         width: 100%;
       }
@@ -272,6 +273,11 @@
   // 手機夥伴
   .partner {
     margin-top: 120px;
+
+    &-title {
+      font-size: 20px;
+    }
+
     &-logo {
       overflow: hidden;
 

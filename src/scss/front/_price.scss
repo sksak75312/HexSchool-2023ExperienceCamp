@@ -36,14 +36,17 @@
       display: flex;
       flex-direction: column;
       width: 48%;
-      height: 318px;
       border: 1px solid $list-item-border-color;
       border-radius: 16px;
+
+      &:hover {
+        border-color: $hover-border-color;
+      }
     }
 
     &-top {
       flex-grow: 1;
-      padding: 20px 32px;
+      padding: 20px 32px 160px 32px;
 
       h3 {
         @include section-text-style(32px, 900, 1.2);
@@ -99,16 +102,17 @@
 
   &-title {
     @include section-text-style(32px, 900, 1.2);
-    flex-shrink: 0;
   }
 
   &-list {
+    width: 66%;
+
     &-item {
       padding: 40px 0;
       border-bottom: 1px solid $list-item-border-color;
 
       &:first-child {
-        padding: 0 0 40px 0;
+        padding-top: 0px;
       }
 
       h3{
@@ -132,11 +136,10 @@
 
   &-title {
     @include section-text-style(32px, 900, 1.2);
-    flex-shrink: 0;
   }
 
   &-list {
-    width: 856px;
+    width: 66%;
     
     &-item {
       display: flex;
@@ -148,7 +151,7 @@
       cursor: pointer;
 
       &:hover {
-        border-color: #ffffff;
+        border-color: $hover-border-color;
       }
 
       &:last-child {
@@ -168,6 +171,19 @@
 
 // 767px 以下樣式調整
 @media (max-width: 767px) {
+  // 橫幅區塊
+    .pr-banner {
+      &-title {
+        font-size: 48px;
+      }
+  
+      &-content {
+        font-size: 28px;
+        max-width: 257px;
+        margin: 64px 0 258px auto;
+      }
+    }
+    
   // 定價區塊
   .pr-price {
     &-list {
@@ -185,6 +201,10 @@
   .pr-norm {
     flex-direction: column;
 
+    &-list {
+      width: auto;
+    }
+
     &-title {
       margin-bottom: 48px;
     }
@@ -194,6 +214,10 @@
   .pr-question {
     flex-direction: column;
     margin: 120px 0;
+
+    &-title {
+      font-size: 20px;
+    }
 
     &-list {
       width: auto;
@@ -208,34 +232,18 @@
 
 // 575 以下樣式調整
 @media (max-width: 575px) {
-  // 橫幅區塊
-  .pr-banner {
-      &-title {
-        font-size: 48px;
-      }
-  
-      &-content {
-        font-size: 28px;
-        max-width: 257px;
-        margin: 64px 0 258px auto;
-      }
-    }
-
   //定價區塊
   .pr-price {
     margin-top: 120px;
+
     &-title {
       font-size: 20px;
       margin-bottom: 24px;
     }
 
-    &-list {
-      &-item {
-        height: 240px;
-      }
-
+    &-list {    
       &-top {
-        padding: 20px;
+        padding: 20px 20px 82px 20px;
       }
     }
   }
