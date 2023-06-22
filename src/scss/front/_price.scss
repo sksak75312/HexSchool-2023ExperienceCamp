@@ -1,6 +1,6 @@
 // 定價橫幅區塊
 .pr-banner {
-  padding-top: 40px;
+  padding: 40px 12px 0 12px;
 
   &-title {
     @include section-text-style(120px, 900, 1.2);
@@ -21,6 +21,7 @@
 // 定價區塊
 .pr-price {
   margin-top: 160px;
+  padding: 0 12px;
 
   &-title {
     @include section-text-style(32px, 900, 1.2);
@@ -48,7 +49,7 @@
       flex-grow: 1;
       padding: 20px 32px 160px 32px;
 
-      h3 {
+      h4 {
         @include section-text-style(32px, 900, 1.2);
       }
 
@@ -99,6 +100,7 @@
   justify-content: space-between;
   gap: 12px;
   margin-top: 160px;
+  padding: 0 12px;
 
   &-title {
     @include section-text-style(32px, 900, 1.2);
@@ -115,7 +117,7 @@
         padding-top: 0px;
       }
 
-      h3{
+      h4 {
         @include section-text-style(48px, 900, 1.2);
         margin-bottom: 24px;
       }
@@ -132,7 +134,9 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  margin: 160px 0;
+  margin-top: 160px;
+  margin-bottom: 160px;
+  padding: 0 12px;
 
   &-title {
     @include section-text-style(32px, 900, 1.2);
@@ -158,7 +162,7 @@
         margin-bottom: 0;
       }
 
-      h3 {
+      h4 {
         @include section-text-style(20px, 900, 1.2);
       }
 
@@ -219,7 +223,7 @@
     &-list {
       width: auto;
       &-item {
-        h3 {
+        h4 {
           font-size: 32px;
         }
     

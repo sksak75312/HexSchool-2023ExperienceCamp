@@ -9,6 +9,8 @@
 }
 
 .tools {
+  padding: 0 12px;
+  
   &-title {
     @include section-text-style(80px, 900, 1.2);
     margin-bottom: 80px;
@@ -169,8 +171,9 @@
 
   &-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px 0;
     margin: 40px 0;
 
     &::after {
@@ -183,7 +186,6 @@
       display: flex;
       flex-direction: column;
       width: 32%;
-      margin-bottom: 24px;
       border: 1px solid #F2F2F2;
       border-radius: 16px;
       overflow: hidden;
@@ -341,7 +343,7 @@
       justify-content: center;
 
       &-item {
-        width: 416px;
+        width: 100%;
       }
     }
   }

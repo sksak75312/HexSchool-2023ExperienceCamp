@@ -8,6 +8,9 @@
   display: none;
 }
 
+.disable-scroll-y {
+  overflow-y: hidden;
+}
 
 // 連結 hover 
 .link-hover:hover {
@@ -41,7 +44,6 @@
 .container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 12px;
 }
 
 // decorate 動畫

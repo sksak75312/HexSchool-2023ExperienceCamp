@@ -12,6 +12,7 @@
 - HTML Loader
 - HTML Webpack Plugin
 - CSS Loader
+- SASS
 - SASS Loader
 - Mini CSS Extract Plugin
 - jQuery
